@@ -131,6 +131,7 @@ export class AppSidebarNavItemComponent implements OnInit {
       [ngClass]="hasVariant() ? 'nav-link nav-link-' + link.variant : 'nav-link'"
       routerLinkActive="active"
       [routerLink]="[link.url]"
+      [queryParamsHandling]="(link.queryParamsHandling ? link.queryParamsHandling : null)"
       (click)="hideMobile()">
       <i *ngIf="isIcon()" class="nav-icon {{ link.icon }}"></i>
       {{ link.name }}
